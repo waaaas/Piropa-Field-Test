@@ -9,8 +9,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	private static final String DATABASE_NAME = "Data.db";
 	private static final int DATABASE_VERSION = 1;
 	
-	private static final String DATA_RADIO_MAST_ID = "RADIO_MAST_ID";
+	private static final String DATA_TABLE = "Piropadb";
 	
+	private static final String DATA_RADIO_MAST_ID = "RADIO_MAST_ID";
 	private static final String DATA_ID = "_ID";
 	private static final String DATA_GPS_X ="X-Axis";
 	private static final String DATA_GPS_Y ="Y-Axis";
@@ -24,7 +25,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
-	String createDB = "CREATE TABLE "+DATA_RADIO_MAST_ID+" ("+
+	String createDB = "CREATE TABLE "+DATA_TABLE+" ("+
+				DATA_RADIO_MAST_ID+" INTEGER,"+
 				DATA_ID+" INTEGER PRIMARY KEY, "+ 
 				DATA_GPS_X+ " TEXT,"+
 				DATA_GPS_Y+ " TEXT,"+
